@@ -10,6 +10,12 @@ class ConnectFour
     introduction
   end
 
+  def play
+    introduction
+    color_prompt
+    @grid.display
+  end
+
   def introduction
     print "\n
            _____                             _    ______               
@@ -18,7 +24,6 @@ class ConnectFour
           | |    / _ \\| '_ \\| '_ \\ / _ \\/ __| __| |  _/ _ \\| | | | '__|
           | \\__/\\ (_) | | | | | | |  __/ (__| |_  | || (_) | |_| | |   
            \\____/\\___/|_| |_|_| |_|\\___|\\___|\\__| \\_| \\___/ \\__,_|_|"
-    #color_prompt
   end
 
   # Prompts player 1 for color choice
@@ -30,9 +35,9 @@ class ConnectFour
     if valid_color_choice?(choice)
       case choice
       when "R"
-        @players[0].color, @players[1].color = :R, :L
+        @players[0].color, @players[1].color = :red, :yellow
       when "L"
-        @players[0].color, @players[1].color = :L, :R
+        @players[0].color, @players[1].color = :red, :yellow
       end
     else
       puts "Invalid choice, please enter R or Y\n"
@@ -41,7 +46,7 @@ class ConnectFour
   end
 
   def valid_color_choice?(color)
-    return true if color == 'R' or color == 'L'
+    return true if color == 'R' or color == 'Y'
     false
   end
 end
