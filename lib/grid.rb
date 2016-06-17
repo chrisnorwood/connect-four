@@ -1,5 +1,3 @@
-require 'string'
-
 class Grid
   attr_accessor :data, :winner
   
@@ -29,6 +27,7 @@ class Grid
       print "|\n"
       print "|---------------------------|\n"
     end
+    print "\n"
   end
 
   def move column, color_sym

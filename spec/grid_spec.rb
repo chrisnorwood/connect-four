@@ -1,4 +1,5 @@
 require 'grid'
+require 'string'
 
 describe Grid do
   before do
@@ -32,7 +33,7 @@ describe Grid do
             "|   |   |   |   |   |   |   |\n"+
             "|---------------------------|\n"+
             "|   |   |   |   |   |   |   |\n"+
-            "|---------------------------|\n").to_stdout
+            "|---------------------------|\n\n").to_stdout
       end
     end
     
@@ -56,7 +57,7 @@ describe Grid do
             "|"+"   ".color(:red)+"|   |   |   |   |   |   |\n"+
             "|---------------------------|\n"+
             "|"+"   ".color(:yellow)+"|"+"   ".color(:yellow)+"|   |   |   |   |   |\n"+
-            "|---------------------------|\n"
+            "|---------------------------|\n\n"
           ).to_stdout
       end
     end
